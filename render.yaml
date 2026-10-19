@@ -1,0 +1,19 @@
+# Render Blueprint - Consultorio Médico CC
+# https://render.com/docs/blueprint-spec
+
+services:
+  - type: web
+    name: consultorio-medico-cc
+    runtime: static
+    repo: https://github.com/TU_USUARIO/ConsultorioMedicoCC  # cámbialo después de subir a GitHub
+    branch: main
+    buildCommand: ""
+    staticPublishPath: .
+    autoDeploy: true
+    headers:
+      - path: /*
+        name: X-Frame-Options
+        value: SAMEORIGIN
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
